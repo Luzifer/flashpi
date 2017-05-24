@@ -1,0 +1,1 @@
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHzwqMqPrIgiOfgkTw35cVVwihnWhjFLVoXY7PZMGSdO luzifer@knut-ws01
