@@ -29,12 +29,12 @@ fi
 
 if ! [ -f "${SOURCE_IMAGE}" ]; then
   echo "Did not find SOURCE_IMAGE, downloading / detecting once"
-  if ( test $(ls -1tr ${STORAGE_DIR}/*raspbian-jessie-lite.img | wc -l) -lt 1 ); then
+  if ( test $(ls -1tr ${STORAGE_DIR}/*raspbian-*-lite.img | wc -l) -lt 1 ); then
     curl -L https://downloads.raspberrypi.org/raspbian_lite_latest -o /tmp/raspbian.zip
     unzip /tmp/raspbian.zip -d ${STORAGE_DIR}
     rm /tmp/raspbian.zip
   fi
-  SOURCE_IMAGE=$(ls -1tr ${STORAGE_DIR}/*raspbian-jessie-lite.img | head -n1)
+  SOURCE_IMAGE=$(ls -1tr ${STORAGE_DIR}/*raspbian-*-lite.img | head -n1)
 fi
 
 echo "Flashing Raspian image"
