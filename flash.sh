@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -xe
+set -euxo pipefail
 
 SDCARD_DEVICE=$2
 SOURCE_IMAGE=${SOURCE_IMAGE:-none}
